@@ -1,13 +1,172 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(152, 185, 185);
+}
+.heading{
+    height: 10vh;
+    background-color: rgb(17, 219, 219);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+    font-family: 'Itim', cursive;
+    margin-bottom: 3em;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.cards{
+    height: 100vh;
+    width: auto;
+}
+.card{
+    height: 70vh;
+    width: 25%;
+    border: 2px solid black;
+    float: left;
+    margin-right: 3em;
+    margin-bottom: 4em;
+    margin-left: 4em;
+    border-radius: 3em;
+    background-color: rgb(187 233 233);
+    transition: 0.5s;
+    box-shadow: rgb(0 0 0 / 35%) 0px 16px 17px;
+}
+.card:hover{
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
+}
+.card_img{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card_name{
+    padding: 0.4em 1.4em;
+    margin-bottom: 0.2em;
+    font-size: 1.8em;
+    font-family: 'Itim', cursive;
+}
+.card_name:hover{
+    color: cyan;
+}
+.card_title{
+    padding: 0.4em 1.4em;
+    font-size: 1em;
+    font-family: 'Edu QLD Beginner', cursive;
+}
+.card_link{
+    margin-top: 2em;
+    padding: 0.4em 1.4em;
+}
+.btn{
+    border: 2px solid black;
+    height: 2em;
+    width: 6em;
+    font-size: 1.2em;
+    border-radius: 1em;
+    font-family: 'Itim', cursive;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.btn:hover{
+    transform: scale(1.25);
+    background-color: rgb(17, 219, 219);
+    border: 2px solid white;
+    color: white;
+    
+}
+
+
+/* RESPONSIVE */
+@media only screen and (max-width: 1385px) {
+  .card_link {
+    margin-top: 1em;
+ }
+ 
+}
+@media only screen and (max-width: 1250px) {
+  .card_link {
+    margin-top: 0.4em;
+}
+.card_title {
+    padding: 0.4em 0.4em;
+}
+
+}
+
+@media only screen and (max-width: 990px) {
+    .card_img img{
+        height: 9em;
+        width: 8em;
+    }
+    .card{
+        height: 60vh;
+    }
+    .card_name {
+    padding: 0.4em 1em;
+    font-size: 1.4em;
+    }
+    .card_title {
+    font-size: 0.8em;
+    }
+    .btn{
+    height: 2em;
+    width: 6em;
+    font-size: 0.8em;
+    border-radius: 0.8em;
+    }
+}
+
+@media only screen and (max-width: 710px) {
+  .card {
+    height: 50vh;
+}
+.card_img img {
+    height: 7em;
+    width: 7em;
+}
+.card_name {
+    padding: 0.4em 0.6em;
+    font-size: 1.2em;
+}
+.card_title {
+    font-size: 0.6em;
+}
+ 
+}
+
+@media only screen and (max-width: 682px) {
+    .card{
+        width: 40%;
+    }
+}
+@media only screen and (max-width: 534px) {
+    .heading{
+        font-size: 0.6em;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .card {
+    width: 75%;
+    margin-left: 3em;
+}
+}
+@media only screen and (max-width: 355px) {
+    .heading {
+    font-size: 0.5em;
+}
+.card{
+    margin-left: 3em;
+}
+}
+@media only screen and (max-width: 304px) {
+    .heading {
+    font-size: 0.4em;
+}
 }
